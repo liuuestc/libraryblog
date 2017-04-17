@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel='stylesheet' href='/stylesheets/login.css' />
+</head>
+<body>
+<div id="login">
+  <h1>注册</h1>
+  <form method="post" action="/users/create" onsubmit="return checkReg()">
+    <input type="text" required="required" placeholder="用户名" name="username"></input>
+    <input type="text" required="required" placeholder="邮箱" name="email"></input>
+    <input type="password" required="required" placeholder="输入密码" name="password"></input>
+    <input type="password" required="required" placeholder="再次密码" name="password_confirm"></input>
+    <button class="but" type="submit">注册</button>
+  </form>
+</div>
+
+<script src="/javascripts/jQuery.js"></script>
+<script charset="utf-8" src="/javascripts/myjs/checkUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body background="/a.jpg">
+<ul>
+    <% doucuments.forEach(function (doc) {%>
+       <a href= "/upload/getdoc/<%= doc %>"><%= doc %></a></br>
+    <% }) %>
+</ul>
+</body>

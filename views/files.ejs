@@ -1,0 +1,50 @@
+
+        <div class="jumbotron" style="width: 90%">
+				<%- title%>
+            </div>
+
+        <!--评论提交-->
+            <div class="container-fluid" style="width: 150% ;margin-left: -7%">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form onsubmit="return false;" role="form" method="post" action="/upload/doc/comment/<%= filename%>" >
+                            <div class="form-group">
+                                <label for="cmtname">
+                                    name
+                                </label>
+                                <input type="text" class="form-control" name="cmtname" id="cmtname" />
+                            </div>
+                            <div class="form-group">
+
+                                <label for="cmtPassword">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control" name="cmtPassword" id="cmtPassword" />
+                            </div>
+                            <div class="form-group">
+                            <label for="cmtmessage">Message</label>
+                            <textarea name="cmtmessage" rows="5" style="width: 100%" name="cmtmessage" id="cmtmessage"></textarea>
+                                </div>
+                            <button type="button" id="submitComment" name="submitComment" class="btn btn-default" style="margin-left: 3%">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+
+        <!--显示文本-->
+        <div id="cmtlist" style="width: 100%; margin-left: -3%;color: #000066">
+            <h4 style="text-align: center; margin-top: 10px">评论</h4>
+            <%- comment%>
+            <div class="row" style='text-align: left;margin-left: -5%'>
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script charset="utf-8" src="/javascripts/jQuery.js"></script>
+    <script charset="utf-8" src="/javascripts/page.js"></script>

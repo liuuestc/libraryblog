@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Website template form http://www.cssmoban.com/ -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>shiyanshi BLOG</title>
+	<link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+	<link rel="stylesheet" href="stylesheets/custom.css" type="text/css">
+	<link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="stylesheets/bootstrap-theme.min.css" type="text/css">
+</head>
+<body>
+	<div class="border">
+		<div id="bg">
+			background
+		</div>
+		<div class="page">
+
+			<div class="sidebar">
+				<a href="/" id="logo"><img src="images/logo.png" alt="logo"></a>
+				<ul>
+					<li class="selected">
+						<a href="/">Home</a>
+					</li>
+                    <li>
+                        <a href="upload/upload">upload</a>
+                    </li>
+					<li>
+						<a href="/users/login/starfarmingl">sign in</a><br/>
+						<a href="/users/create">sign up</a>
+					</li>
+				</ul>
+			</div>
+			<div class="body">
+				<div class="blog" id="blog">
+					<div class="container-fluid" style="margin-bottom: 30px">
+						<div class="row-fluid">
+							<h3 class="nav" style="text-align: center;background-color: whitesmoke;">文档</h3>
+								<div class="col-md-12 column" style="margin-top: 10px; margin-left:-5%;margin-bottom:10px;width: 110%">
+									<%- titles%>
+									<div class="pagination" style="margin-top: 10px">
+										<%- pages%>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+				<script charset="utf-8" src="/javascripts/jQuery.js"></script>
+				<script charset="utf-8" src="/javascripts/page.js"></script>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

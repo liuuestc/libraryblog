@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel='stylesheet' href='/stylesheets/login.css' />
+</head>
+<body>
+<div id="login">
+  <h1>登录</h1>
+  <form method="post" action="/users/login" onsubmit="return checkLogin()">
+    <input type="text" required="required" placeholder="用户名" name="username"></input>
+    <input type="password" required="required" placeholder="密码" name="password"></input>
+    <button class="but" type="submit">登录</button>
+  </form>
+</div>
+
+<script src="/javascripts/jQuery.js"></script>
+<script charset="utf-8" src="/javascripts/checkUser.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.contentAll{
+    width:80%;
+    left: 10%;
+    text-align: center;
+}
+
+.bodyd{
+    background-image:url('/images/bg.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+

@@ -1,0 +1,11 @@
+.classBlock {
+    margin-top: 20px;
+    background-color: linen;
+    float: left;
+    width: 90%;
+    height: 150px;
+}
+
+.blog>h2{
+    margin-top: 10px;
+}

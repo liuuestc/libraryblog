@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <!--
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    -->
+    <link rel='stylesheet' href='/stylesheets/edit.css' />
+    <script charset="utf-8" src="/js/jQuery.js"></script>
+    <script charset="utf-8" src="/kindeditor/kindeditor-all-min.js"></script>
+    <script charset="UTF-8" src="/kindeditor/lang/zh-CN.js"></script>
+    <script>
+        var options = {
+            uploadJson: '/articles/uploadImg'
+        };
+        KindEditor.ready(function(K) {
+            window.editor = K.create('#thecontent', options);
+        });
+    </script>
+  </head>
+  <body background="/images/bg-body.jpg" style="margin-left: 15%">
+  <div style="width: 80%" >
+    <form  id="article" action="/articles/edit/<%= id%>" method="post">
+      <h4 style="display: inline">文章的主题   :</h4>
+      <input id="subject" name="subject" type="text" value="<%= subject%>" style="width: 88%;height:20px;display:inline;border-top-left-radius: 5px;float: right" />
+      <div style="clear:both; margin-top: 10px"></div>
+      <h4 style="display: inline; border: hidden">文章的标签:</h4>
+      <input id="tags" name="tags" type="text" value="<%= tags%>" style="width: 88%;height:20px;display:inline;border-top-left-radius: 5px;float: right" placeholder="如果有多个请使用逗号隔开"/>
+      <div style="clear:both; margin-top: 10px"></div>
+      <h4 style="display: inline ;border: hidden;">文章的标题：</h4>
+      <input id="title" name="title" type="text" value="<%= title%>" type="text" style="width: 88%;height:20px;display:inline;border-top-left-radius: 5px; float: right;text-align: center"/>
+      <h3 style="text-align: center;color: #F1F1F1;margin-bottom: 10px;margin-top: 8px"><strong>编辑文章正文</strong></h3>
+      <!--函数暂时还没有-->
+      <textarea  style="width: 100%" name="thecontent" id="thecontent"  rows="30"><%= content%></textarea>
+        <input class="bg-success" type="submit" value="Submit"/>
+      <button type="submit" id="confirm"  disabled="disabled" onclick="confirmArticle()">
+        确认发表
+      </button>
+      <button type="submit" id="cancel" disabled="disabled" onclick="cancelArticle()">
+        放弃发表
+      </button>
+      <button type="submit" id="delay" disabled="disabled"  onclick="delayArticle()">
+        收藏到草稿箱
+      </button>
+    </form>
+  </div>
+  </body>
+</html>
